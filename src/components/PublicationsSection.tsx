@@ -3,34 +3,32 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Button } from "@/components/ui/button";
 import { ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
+import { publications } from "@/data/publications";
 
-const publications = [
-  {
-    title: "Las narrativas políticas en la era digital",
-    description: "Análisis de cómo las narrativas políticas se transforman y adaptan en el entorno digital actual.",
-    date: "15 de abril, 2025",
-    image: "https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=1024&auto=format&fit=crop",
-    link: "https://linkedin.com/company/lunae",
-  },
-  {
-    title: "Estrategias de comunicación en tiempos de crisis",
-    description: "Guía para desarrollar estrategias de comunicación efectivas durante situaciones de crisis política.",
-    date: "2 de marzo, 2025",
-    image: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1024&auto=format&fit=crop",
-    link: "https://linkedin.com/company/lunae",
-  },
-  {
-    title: "El futuro de la consultoría política",
-    description: "Exploramos las tendencias emergentes en el campo de la consultoría política y su impacto en las organizaciones.",
-    date: "18 de enero, 2025",
-    image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=1024&auto=format&fit=crop",
-    link: "https://linkedin.com/company/lunae",
-  },
-];
+// Las fechas están en formato "DD de mes, AAAA". Creamos una función para parsearlas a objetos Date.
+const parseFecha = (fecha: string) => {
+  // Por ejemplo: "15 de abril, 2025"
+  const meses: { [k: string]: number } = {
+    enero: 0, febrero: 1, marzo: 2, abril: 3, mayo: 4, junio: 5,
+    julio: 6, agosto: 7, septiembre: 8, octubre: 9, noviembre:10, diciembre:11
+  };
+  const match = fecha.match(/(\d{1,2}) de (\w+), (\d{4})/);
+  if (!match) return new Date(0);
+  const [_, d, m, y] = match;
+  const mes = meses[m.toLowerCase()] ?? 0;
+  return new Date(Number(y), mes, Number(d));
+};
+
+// Ordena de más reciente a más antigua
+const sortedPublications = [...publications].sort((a, b) => {
+  const dateA = parseFecha(a.date);
+  const dateB = parseFecha(b.date);
+  return dateB.getTime() - dateA.getTime();
+});
 
 const PublicationsSection = () => {
-  // Solo muestra las 3 publicaciones más recientes
-  const recentPublications = publications.slice(0, 3);
+  // Tomar las 3 más recientes después de ordenar
+  const recentPublications = sortedPublications.slice(0, 3);
   return (
     <section id="publications">
       <div className="container">

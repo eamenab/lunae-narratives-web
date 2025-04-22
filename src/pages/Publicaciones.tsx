@@ -3,59 +3,26 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Button } from "@/components/ui/button";
 import { ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
+import { publications } from "@/data/publications";
 
-const publications = [
-  {
-    title: "Las narrativas políticas en la era digital",
-    description: "Análisis de cómo las narrativas políticas se transforman y adaptan en el entorno digital actual.",
-    date: "15 de abril, 2025",
-    image: "https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=1024&auto=format&fit=crop",
-    link: "https://linkedin.com/company/lunae",
-  },
-  {
-    title: "Estrategias de comunicación en tiempos de crisis",
-    description: "Guía para desarrollar estrategias de comunicación efectivas durante situaciones de crisis política.",
-    date: "2 de marzo, 2025",
-    image: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1024&auto=format&fit=crop",
-    link: "https://linkedin.com/company/lunae",
-  },
-  {
-    title: "El futuro de la consultoría política",
-    description: "Exploramos las tendencias emergentes en el campo de la consultoría política y su impacto en las organizaciones.",
-    date: "1 de enero, 2025",
-    image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=1024&auto=format&fit=crop",
-    link: "https://linkedin.com/company/lunae",
-  },
-  {
-    title: "El futuro de la consultoría política",
-    description: "Exploramos las tendencias emergentes en el campo de la consultoría política y su impacto en las organizaciones.",
-    date: "2 de enero, 2025",
-    image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=1024&auto=format&fit=crop",
-    link: "https://linkedin.com/company/lunae",
-  },
-  {
-    title: "El futuro de la consultoría política",
-    description: "Exploramos las tendencias emergentes en el campo de la consultoría política y su impacto en las organizaciones.",
-    date: "18 de abril, 2025",
-    image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=1024&auto=format&fit=crop",
-    link: "https://linkedin.com/company/lunae",
-  },
-  {
-    title: "El futuro de la consultoría política",
-    description: "Exploramos las tendencias emergentes en el campo de la consultoría política y su impacto en las organizaciones.",
-    date: "18 de enero, 2025",
-    image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=1024&auto=format&fit=crop",
-    link: "https://linkedin.com/company/lunae",
-  },
-  {
-    title: "El futuro de la consultoría política",
-    description: "Exploramos las tendencias emergentes en el campo de la consultoría política y su impacto en las organizaciones.",
-    date: "18 de enero, 2025",
-    image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=1024&auto=format&fit=crop",
-    link: "https://linkedin.com/company/lunae",
-  },
-  // Puedes agregar aquí más publicaciones...
-];
+// Utilizamos la misma función de parseo para asegurarnos de que el orden de publicaciones se mantenga igual
+const parseFecha = (fecha: string) => {
+  const meses: { [k: string]: number } = {
+    enero: 0, febrero: 1, marzo: 2, abril: 3, mayo: 4, junio: 5,
+    julio: 6, agosto: 7, septiembre: 8, octubre: 9, noviembre:10, diciembre:11
+  };
+  const match = fecha.match(/(\d{1,2}) de (\w+), (\d{4})/);
+  if (!match) return new Date(0);
+  const [_, d, m, y] = match;
+  const mes = meses[m.toLowerCase()] ?? 0;
+  return new Date(Number(y), mes, Number(d));
+};
+
+const sortedPublications = [...publications].sort((a, b) => {
+  const dateA = parseFecha(a.date);
+  const dateB = parseFecha(b.date);
+  return dateB.getTime() - dateA.getTime();
+});
 
 const Publicaciones = () => {
   return (
@@ -63,7 +30,7 @@ const Publicaciones = () => {
       <div className="container">
         <h1 className="section-title font-display text-black dark:text-white">Todas las publicaciones</h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
-          {publications.map((publication, index) => (
+          {sortedPublications.map((publication, index) => (
             <Card key={index} className="flex flex-col h-full hover:shadow-md transition-shadow">
               <div className="aspect-video w-full overflow-hidden rounded-t-lg">
                 <img
