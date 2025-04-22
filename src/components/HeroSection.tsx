@@ -7,17 +7,10 @@ const HeroSection = () => {
           <div className="lg:col-span-6 lg:col-start-2 space-y-6 animate-fade-in">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
               Inteligencia política. <br />
-              <span className="text-primary">Narrativas con propósito.</span>
+              
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl"></p>
-            <div className="pt-4">
-              <Button size="lg" asChild>
-                <a href="#contact" className="group flex gap-2">
-                  Contáctanos{" "}
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </a>
-              </Button>
-            </div>
+            
           </div>
           
           <div className="lg:col-span-4 flex justify-center lg:justify-end">
