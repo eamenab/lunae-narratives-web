@@ -1,5 +1,4 @@
-
-import { LinkedIn, Mail, Phone } from "lucide-react";
+import { Linkedin, Mail, Phone } from "lucide-react";
 import ThemeSwitcher from "./ThemeSwitcher";
 
 const Footer = () => {
@@ -26,7 +25,7 @@ const Footer = () => {
                 className="text-muted-foreground hover:text-primary"
                 aria-label="LinkedIn"
               >
-                <LinkedIn className="h-5 w-5" />
+                <Linkedin className="h-5 w-5" />
               </a>
               <a
                 href="mailto:contacto@lunaeadvisory.com"
