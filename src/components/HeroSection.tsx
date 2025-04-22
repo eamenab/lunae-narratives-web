@@ -1,13 +1,7 @@
-
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-
 const HeroSection = () => {
-  return (
-    <section 
-      id="home" 
-      className="min-h-screen flex items-center pt-16 md:pt-20 bg-gradient-to-b from-background to-muted dark:from-background dark:to-muted/30"
-    >
+  return <section id="home" className="min-h-screen flex items-center pt-16 md:pt-20 bg-gradient-to-b from-background to-muted dark:from-background dark:to-muted/30">
       <div className="container">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-6 lg:col-start-2 space-y-6 animate-fade-in">
@@ -15,9 +9,7 @@ const HeroSection = () => {
               Inteligencia política. <br />
               <span className="text-primary">Narrativas con propósito.</span>
             </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl">
-              Acompañamos decisiones estratégicas en entornos complejos.
-            </p>
+            <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl"></p>
             <div className="pt-4">
               <Button size="lg" asChild>
                 <a href="#contact" className="group flex gap-2">
@@ -36,8 +28,6 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default HeroSection;
