@@ -102,9 +102,6 @@ const Navbar = () => {
                   ))}
                 </nav>
                 <div className="mt-auto">
-                  <Button className="w-full mt-6" asChild>
-                    <a href="#contact">Contáctanos</a>
-                  </Button>
                 </div>
               </div>
             </div>
@@ -120,9 +117,6 @@ const Navbar = () => {
             </nav>
             <div className="hidden md:flex items-center gap-4">
               <ThemeSwitcher />
-              <Button asChild>
-                <a href="#contact">Contáctanos</a>
-              </Button>
             </div>
           </>
         )}

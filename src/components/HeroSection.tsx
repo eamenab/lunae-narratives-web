@@ -8,14 +8,8 @@ const HeroSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-6 lg:col-start-2 space-y-6 animate-fade-in">
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight text-black dark:text-white">
-              Inteligencia política. <br />
+              Inteligencia y Narrativa Política.
             </h1>
-            <p className="font-sans text-xl md:text-2xl text-[#222] dark:text-zinc-200 max-w-2xl">
-              Soluciones estratégicas para navegar la complejidad política y empresarial actual.
-            </p>
-            <Button className="bg-[#222] hover:bg-[#111] text-white font-semibold rounded-lg px-6 py-3 mt-4">
-              Conócenos <ArrowRight className="ml-2" />
-            </Button>
           </div>
           <div className="lg:col-span-4 flex justify-center lg:justify-end">
             <div className="relative w-full max-w-md aspect-square">
