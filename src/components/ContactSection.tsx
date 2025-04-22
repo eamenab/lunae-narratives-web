@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -41,15 +40,14 @@ const ContactSection = () => {
     <section id="contact">
       <div className="container">
         <div className="max-w-3xl mx-auto">
-          <h2 className="section-title">Contacto</h2>
-          <p className="section-subtitle">
+          <h2 className="section-title font-display text-black dark:text-white">Contacto</h2>
+          <p className="section-subtitle font-sans text-[#555] dark:text-zinc-200">
             ¿Necesitas nuestra ayuda? Envíanos un mensaje y te responderemos a la brevedad.
           </p>
-
           <form onSubmit={handleSubmit} className="space-y-6 mt-8">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium mb-2">
+                <label htmlFor="name" className="block font-sans text-sm font-medium mb-2 text-[#111] dark:text-zinc-100">
                   Nombre
                 </label>
                 <Input
@@ -62,7 +60,7 @@ const ContactSection = () => {
                 />
               </div>
               <div>
-                <label htmlFor="email" className="block text-sm font-medium mb-2">
+                <label htmlFor="email" className="block font-sans text-sm font-medium mb-2 text-[#111] dark:text-zinc-100">
                   Email
                 </label>
                 <Input
@@ -76,9 +74,8 @@ const ContactSection = () => {
                 />
               </div>
             </div>
-
             <div>
-              <label htmlFor="message" className="block text-sm font-medium mb-2">
+              <label htmlFor="message" className="block font-sans text-sm font-medium mb-2 text-[#111] dark:text-zinc-100">
                 Mensaje
               </label>
               <Textarea
@@ -91,9 +88,8 @@ const ContactSection = () => {
                 required
               />
             </div>
-
             <div className="text-right">
-              <Button type="submit">Enviar mensaje</Button>
+              <Button type="submit" className="bg-[#222] hover:bg-[#111] text-white font-sans px-6 py-2 rounded-lg">Enviar mensaje</Button>
             </div>
           </form>
         </div>

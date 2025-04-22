@@ -26,17 +26,16 @@ const publications = [
     image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=1024&auto=format&fit=crop",
     link: "https://linkedin.com/company/lunae",
   },
+  // Puedes agregar aquí más publicaciones...
 ];
 
-const PublicationsSection = () => {
-  // Solo muestra las 3 publicaciones más recientes
-  const recentPublications = publications.slice(0, 3);
+const Publicaciones = () => {
   return (
-    <section id="publications">
+    <section id="publicaciones">
       <div className="container">
-        <h2 className="section-title font-display text-black dark:text-white">Publicaciones</h2>
+        <h1 className="section-title font-display text-black dark:text-white">Todas las publicaciones</h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
-          {recentPublications.map((publication, index) => (
+          {publications.map((publication, index) => (
             <Card key={index} className="flex flex-col h-full hover:shadow-md transition-shadow">
               <div className="aspect-video w-full overflow-hidden rounded-t-lg">
                 <img
@@ -69,8 +68,8 @@ const PublicationsSection = () => {
         </div>
         <div className="mt-12 text-center">
           <Button asChild className="bg-[#222] hover:bg-[#111] text-white px-8 font-sans">
-            <Link to="/publicaciones" className="flex items-center gap-2">
-              Ver todas las publicaciones <ExternalLink className="h-4 w-4" />
+            <Link to="/" className="flex items-center gap-2">
+              Volver al inicio
             </Link>
           </Button>
         </div>
@@ -78,4 +77,5 @@ const PublicationsSection = () => {
     </section>
   );
 };
-export default PublicationsSection;
+
+export default Publicaciones;

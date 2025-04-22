@@ -75,7 +75,8 @@ export default {
         }
       },
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
+        sans: ['Avenir', 'Helvetica', 'Arial', 'sans-serif'],
+        display: ['Montserrat', 'sans-serif'],
         serif: ['Lora', 'serif'],
       },
       borderRadius: {
