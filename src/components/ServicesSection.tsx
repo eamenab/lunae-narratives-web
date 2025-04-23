@@ -4,19 +4,18 @@ const services = [
     title: "Monitoreo regulatorio",
     description:
       "Seguimiento atento de oportunidades y obstáculos para proteger tu agenda y estrategia de negocios.",
-    // Reemplaza por tu propia imagen real para producción, aquí una ilustración Unsplash
-    image: "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=600&q=80",
+    image: "monitoreo.jpg",
   },
   {
     title: "Hablar en político",
     description: "Traducimos lo que quieres decir a lo que será escuchado.",
-    image: "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=600&q=80",
+    image: "hablar_en_político.jpg",
   },
   {
     title: "Inteligencia corporativa",
     description:
       "Trabajo de inteligencia para entender mejor las narrativas emergentes.",
-    image: "https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80",
+    image: "inteligencia_corporativa.jpg",
   },
 ];
 
@@ -24,7 +23,7 @@ const ServicesSection = () => {
   return (
     <section id="services" className="bg-muted/50 dark:bg-muted/10">
       <div className="container">
-        <h2 className="section-title font-display text-black dark:text-white">Qué hacemos</h2>
+        <h2 className="section-title font-display text-[#333] dark:text-white">qué hacemos</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
           {services.map((service, index) => (
             <div

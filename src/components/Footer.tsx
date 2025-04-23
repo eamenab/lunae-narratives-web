@@ -1,5 +1,13 @@
 import { Linkedin, Mail, Phone } from "lucide-react";
 import ThemeSwitcher from "./ThemeSwitcher";
+import logo from "@/assets/logolunaefinal.004.png";
+
+const scrollToSection = (id: string) => {
+  const element = document.getElementById(id);
+  if (element) {
+    element.scrollIntoView({ behavior: "smooth" });
+  }
+};
 
 const Footer = () => {
   const year = new Date().getFullYear();
@@ -10,67 +18,49 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
           <div className="md:col-span-4">
             <img
-              src="/lovable-uploads/5d2c9a69-7290-450f-936c-e78752e6f3a1.png"
+              src={logo}
               alt="Lunae Advisory Logo"
               className="h-10 mb-4"
             />
             <p className="text-muted-foreground mb-4">
-              Lunae — Comprender. Comunicar. Transformar.
+              lunae — inteligencia y narrativa política
             </p>
-            <div className="flex items-center gap-4">
-              <a
-                href="https://linkedin.com/company/lunae"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-primary"
-                aria-label="LinkedIn"
-              >
-                <Linkedin className="h-5 w-5" />
-              </a>
-              <a
-                href="mailto:contacto@lunaeadvisory.com"
-                className="text-muted-foreground hover:text-primary"
-                aria-label="Email"
-              >
-                <Mail className="h-5 w-5" />
-              </a>
-              <a
-                href="tel:+123456789"
-                className="text-muted-foreground hover:text-primary"
-                aria-label="Phone"
-              >
-                <Phone className="h-5 w-5" />
-              </a>
-            </div>
           </div>
 
           <div className="md:col-span-2">
             <h3 className="font-semibold mb-4">Enlaces</h3>
             <ul className="space-y-2">
               <li>
-                <a href="#home" className="text-muted-foreground hover:text-primary">
-                  Inicio
-                </a>
+                <button
+                  onClick={() => scrollToSection("home")}
+                  className="text-muted-foreground hover:text-primary text-left"
+                >
+                  inicio
+                </button>
               </li>
               <li>
-                <a href="#services" className="text-muted-foreground hover:text-primary">
-                  Qué hacemos
-                </a>
+                <button
+                  onClick={() => scrollToSection("services")}
+                  className="text-muted-foreground hover:text-primary text-left"
+                >
+                  qué hacemos
+                </button>
               </li>
               <li>
-                <a href="#publications" className="text-muted-foreground hover:text-primary">
-                  Publicaciones
-                </a>
+                <button
+                  onClick={() => scrollToSection("publications")}
+                  className="text-muted-foreground hover:text-primary text-left"
+                >
+                  publicaciones
+                </button>
               </li>
               <li>
-                <a href="#about" className="text-muted-foreground hover:text-primary">
-                  Sobre Lunae
-                </a>
-              </li>
-              <li>
-                <a href="#contact" className="text-muted-foreground hover:text-primary">
-                  Contacto
-                </a>
+                <button
+                  onClick={() => scrollToSection("about")}
+                  className="text-muted-foreground hover:text-primary text-left"
+                >
+                  sobre lunae
+                </button>
               </li>
             </ul>
           </div>
@@ -78,8 +68,6 @@ const Footer = () => {
           <div className="md:col-span-3">
             <h3 className="font-semibold mb-4">Contacto</h3>
             <address className="not-italic text-muted-foreground">
-              <p>Madrid, España</p>
-              <p>Buenos Aires, Argentina</p>
               <p className="mt-2">
                 <a href="mailto:contacto@lunaeadvisory.com" className="hover:text-primary">
                   contacto@lunaeadvisory.com
@@ -91,23 +79,14 @@ const Footer = () => {
           <div className="md:col-span-3">
             <h3 className="font-semibold mb-4">Preferencias</h3>
             <div className="flex items-center gap-2">
-              <span className="text-muted-foreground">Cambiar tema:</span>
+              <span className="text-muted-foreground">cambiar tema:</span>
               <ThemeSwitcher />
             </div>
-            <p className="mt-4 text-sm text-muted-foreground">
-              <a href="#" className="hover:text-primary">
-                Política de privacidad
-              </a>{" "}
-              |{" "}
-              <a href="#" className="hover:text-primary">
-                Términos y condiciones
-              </a>
-            </p>
           </div>
         </div>
 
         <div className="mt-8 pt-8 border-t border-border text-center text-sm text-muted-foreground">
-          <p>© {year} Lunae Advisory. Todos los derechos reservados.</p>
+          <p>© {year} lunae advisory. todos los derechos reservados.</p>
         </div>
       </div>
     </footer>

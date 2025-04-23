@@ -4,7 +4,6 @@ import HeroSection from "@/components/HeroSection";
 import ServicesSection from "@/components/ServicesSection";
 import PublicationsSection from "@/components/PublicationsSection";
 import AboutSection from "@/components/AboutSection";
-import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import { useEffect } from "react";
 
@@ -12,9 +11,12 @@ const Index = () => {
   // Efecto para manejar el desplazamiento suave a secciones
   useEffect(() => {
     const handleHashChange = () => {
-      const hash = window.location.hash;
-      if (hash) {
-        const element = document.querySelector(hash);
+      let rawHash = window.location.hash; // e.g., "#/services"
+      if (rawHash.startsWith("#/")) rawHash = rawHash.slice(2); // → "services"
+      else if (rawHash.startsWith("#")) rawHash = rawHash.slice(1); // → "services"
+    
+      if (rawHash) {
+        const element = document.getElementById(rawHash);
         if (element) {
           element.scrollIntoView({ behavior: "smooth" });
         }
@@ -39,7 +41,6 @@ const Index = () => {
         <ServicesSection />
         <PublicationsSection />
         <AboutSection />
-        <ContactSection />
       </main>
       <Footer />
     </div>

@@ -1,9 +1,15 @@
-
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import ThemeSwitcher from "./ThemeSwitcher";
 import { useIsMobile } from "@/hooks/use-mobile";
+
+const scrollToSection = (id: string) => {
+  const element = document.getElementById(id);
+  if (element) {
+    element.scrollIntoView({ behavior: "smooth" });
+  }
+};
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -11,49 +17,39 @@ const Navbar = () => {
   const isMobile = useIsMobile();
 
   const navLinks = [
-    { name: "Inicio", href: "#home" },
-    { name: "Qué hacemos", href: "#services" },
-    { name: "Publicaciones", href: "#publications" },
-    { name: "Sobre Lunae", href: "#about" },
-    { name: "Contacto", href: "#contact" },
+    { name: "inicio", target: "home" },
+    { name: "qué hacemos", target: "services" },
+    { name: "publicaciones", target: "publications" },
+    { name: "sobre lunae", target: "about" },
   ];
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollPosition = window.scrollY;
-      setIsScrolled(scrollPosition > 10);
+      setIsScrolled(window.scrollY > 10);
     };
 
     window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
+  const handleClick = (target: string) => {
+    scrollToSection(target);
+    closeMenu();
   };
 
-  const closeMenu = () => {
-    setIsMenuOpen(false);
-  };
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+  const closeMenu = () => setIsMenuOpen(false);
 
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? "bg-background/90 backdrop-blur-md shadow-sm"
-          : "bg-transparent"
+        isScrolled || isMobile ? "bg-background/90" : "bg-transparent"
       }`}
     >
       <div className="container flex items-center justify-between h-16 md:h-20">
-        <a href="#home" className="flex items-center">
-          <img 
-            src="/lovable-uploads/5d2c9a69-7290-450f-936c-e78752e6f3a1.png" 
-            alt="Lunae Advisory Logo"
-            className="h-8 md:h-10"
-          />
-        </a>
+        <button onClick={() => scrollToSection("home")} className="flex items-center">
+          <img src="logolunaefinal.004.png" alt="Lunae Logo" className="h-8 md:h-10" />
+        </button>
 
         {isMobile ? (
           <>
@@ -71,7 +67,6 @@ const Navbar = () => {
               </Button>
             </div>
 
-            {/* Mobile Menu */}
             <div
               id="mobile-menu"
               className={`fixed inset-y-0 right-0 z-50 w-full max-w-xs bg-background border-l transform transition-transform duration-300 ease-in-out ${
@@ -80,29 +75,22 @@ const Navbar = () => {
             >
               <div className="flex flex-col h-full p-6">
                 <div className="flex items-center justify-between mb-8">
-                  <img 
-                    src="/lovable-uploads/5d2c9a69-7290-450f-936c-e78752e6f3a1.png" 
-                    alt="Lunae Advisory Logo"
-                    className="h-8"
-                  />
+                  <img src="logolunaefinal.004.png" alt="Lunae Logo" className="h-8" />
                   <Button variant="ghost" size="icon" onClick={closeMenu}>
                     <X className="h-6 w-6" />
                   </Button>
                 </div>
                 <nav className="flex flex-col gap-6">
                   {navLinks.map((link) => (
-                    <a
+                    <button
                       key={link.name}
-                      href={link.href}
-                      className="nav-link text-lg"
-                      onClick={closeMenu}
+                      onClick={() => handleClick(link.target)}
+                      className="nav-link text-lg text-left"
                     >
                       {link.name}
-                    </a>
+                    </button>
                   ))}
                 </nav>
-                <div className="mt-auto">
-                </div>
               </div>
             </div>
           </>
@@ -110,9 +98,9 @@ const Navbar = () => {
           <>
             <nav className="hidden md:flex items-center space-x-1">
               {navLinks.map((link) => (
-                <a key={link.name} href={link.href} className="nav-link">
+                <button key={link.name} onClick={() => scrollToSection(link.target)} className="nav-link">
                   {link.name}
-                </a>
+                </button>
               ))}
             </nav>
             <div className="hidden md:flex items-center gap-4">
