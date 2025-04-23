@@ -19,10 +19,10 @@ const HeroSection = () => {
       </div>
 
       <div className="container">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-left">
           
           {/* Logo + Text under it */}
-          <div className="lg:col-span-8 flex flex-col items-center animate-fade-in">
+          <div className="lg:col-span-8 flex flex-col items-start animate-fade-in">
             <div className="relative w-full max-w-none">
               <img
                 src={logo}
