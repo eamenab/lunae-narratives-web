@@ -78,6 +78,7 @@ export default {
         sans: ['Avenir', 'Helvetica', 'Arial', 'sans-serif'],
         display: ['Montserrat', 'sans-serif'],
         serif: ['Lora', 'serif'],
+        nunito: ['"Nunito Sans"', 'sans-serif'],
       },
       borderRadius: {
         lg: 'var(--radius)',

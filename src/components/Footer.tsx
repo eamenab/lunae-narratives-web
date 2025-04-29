@@ -23,12 +23,12 @@ const Footer = () => {
               className="h-10 mb-4"
             />
             <p className="text-muted-foreground mb-4">
-              lunae — inteligencia y narrativa política
+              lunae - inteligencia política y narrativa
             </p>
           </div>
 
           <div className="md:col-span-2">
-            <h3 className="font-semibold mb-4">Enlaces</h3>
+            <h3 className="font-nunito mb-4">Enlaces</h3>
             <ul className="space-y-2">
               <li>
                 <button
@@ -66,7 +66,7 @@ const Footer = () => {
           </div>
 
           <div className="md:col-span-3">
-            <h3 className="font-semibold mb-4">Contacto</h3>
+            <h3 className="font-nunito mb-4">Contacto</h3>
             <address className="not-italic text-muted-foreground">
               <p className="mt-2">
                 <a href="mailto:contacto@lunaeadvisory.com" className="hover:text-primary">
@@ -77,7 +77,7 @@ const Footer = () => {
           </div>
 
           <div className="md:col-span-3">
-            <h3 className="font-semibold mb-4">Preferencias</h3>
+            <h3 className="font-nunito mb-4">Preferencias</h3>
             <div className="flex items-center gap-2">
               <span className="text-muted-foreground">cambiar tema:</span>
               <ThemeSwitcher />

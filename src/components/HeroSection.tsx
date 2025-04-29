@@ -1,5 +1,3 @@
-import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
 import galleryBg from "@/assets/gallery_background_11.jpg";
 import logo from "@/assets/logolunaefinal.004.png";
 
@@ -19,23 +17,23 @@ const HeroSection = () => {
       </div>
 
       <div className="container">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-left">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           
           {/* Logo + Text under it */}
-          <div className="lg:col-span-8 flex flex-col items-start animate-fade-in">
+          <div className="lg:col-span-12 flex flex-col items-center text-center animate-fade-in">
             <div className="relative w-full max-w-none">
-              <img
-                src={logo}
-                alt="Lunae Logo"
-                className="w-[50%]"
-              />
+            <img
+              src={logo}
+              alt="Lunae Logo"
+              className="w-[50%] max-w-xs md:max-w-sm lg:max-w-md mx-auto"
+            />
             </div>
-            <h1 className="mt-8 font-display text-4xl md:text-5xl lg:text-6xl leading-tight text-[#333] dark:text-white text-left">
-              inteligencia y narrativa política
+            <br></br>
+            <br></br>
+            <h1 className="font-nunito text-2xl md:text-2xl lg:text-4xl leading-tight text-[#333] dark:text-white text-center scale-x-[1.1]">
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Inteligencia política y narrativa.
             </h1>
           </div>
-
-          {/* (Optional) keep other grid content here */}
         </div>
       </div>
     </section>

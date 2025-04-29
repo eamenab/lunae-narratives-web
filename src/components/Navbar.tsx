@@ -48,7 +48,7 @@ const Navbar = () => {
     >
       <div className="container flex items-center justify-between h-16 md:h-20">
         <button onClick={() => scrollToSection("home")} className="flex items-center">
-          <img src="logolunaefinal.004.png" alt="Lunae Logo" className="h-8 md:h-10" />
+          <img src="logolunaefinal.001.png" alt="Lunae Logo" className="h-8 md:h-10" />
         </button>
 
         {isMobile ? (

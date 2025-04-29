@@ -21,10 +21,18 @@ const services = [
 
 const ServicesSection = () => {
   return (
-    <section id="services" className="bg-muted/50 dark:bg-muted/10">
+    <section id="services" className="bg-muted/50 dark:bg-muted/10 py-16">
       <div className="container">
-        <h2 className="section-title font-display text-[#333] dark:text-white">qué hacemos</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+        {/* Title + Underline */}
+        <div className="inline-block text-left mb-6">
+          <h2 className="font-nunito text-5xl font-light text-[#222] dark:text-white tracking-wide scale-x-[1.1]">
+            Qué hacemos
+          </h2>
+          <div className="h-[1px] bg-[#222] dark:bg-white mt-2 w-full"></div>
+        </div>
+
+        {/* Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-x-12 gap-y-16">
           {services.map((service, index) => (
             <div
               key={index}
@@ -38,8 +46,12 @@ const ServicesSection = () => {
                 />
               </div>
               <div className="flex-1 flex flex-col p-6">
-                <h3 className="font-display text-xl font-bold mb-4 text-[#111] dark:text-zinc-100">{service.title}</h3>
-                <p className="font-sans text-base text-[#444] dark:text-zinc-300 mb-2">{service.description}</p>
+                <h3 className="font-display text-2xl font-light mb-4 text-[#111] dark:text-zinc-100">
+                  {service.title}
+                </h3>
+                <p className="font-sans text-base text-[#444] dark:text-zinc-300 mb-2">
+                  {service.description}
+                </p>
               </div>
             </div>
           ))}
@@ -48,4 +60,7 @@ const ServicesSection = () => {
     </section>
   );
 };
+
 export default ServicesSection;
+
+

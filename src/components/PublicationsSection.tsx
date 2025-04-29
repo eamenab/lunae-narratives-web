@@ -21,7 +21,7 @@ const parseFecha = (fecha: string) => {
 
 const PublicationsSection = () => {
   const publications = usePublications();
-  // Tomar las 3 más recientes después de ordenar
+
   const sortedPublications = useMemo(() => {
     return [...publications].sort((a, b) => {
       return parseFecha(b.date).getTime() - parseFecha(a.date).getTime();
@@ -31,10 +31,18 @@ const PublicationsSection = () => {
   const recentPublications = sortedPublications.slice(0, 3);
 
   return (
-    <section id="publications">
+    <section id="publications" className="py-16">
       <div className="container">
-        <h2 className="section-title font-display text-black dark:text-white">publicaciones</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+        {/* Title + Underline */}
+        <div className="inline-block text-left mb-6">
+          <h2 className="font-nunito text-5xl font-light text-[#222] dark:text-white tracking-wide scale-x-[1.1]">
+            Publicaciones
+          </h2>
+          <div className="h-[1px] bg-[#222] dark:bg-white mt-2 w-full"></div>
+        </div>
+
+        {/* Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {recentPublications.map((publication, index) => (
             <Card key={index} className="flex flex-col h-full hover:shadow-md transition-shadow">
               <div className="aspect-video w-full overflow-hidden rounded-t-lg">
@@ -45,7 +53,9 @@ const PublicationsSection = () => {
                 />
               </div>
               <CardHeader>
-                <CardTitle className="font-display text-lg md:text-xl font-bold text-[#111] dark:text-zinc-100">{publication.title}</CardTitle>
+                <CardTitle className="font-display text-lg md:text-xl font-bold text-[#111] dark:text-zinc-100">
+                  {publication.title}
+                </CardTitle>
                 <CardDescription className="font-sans text-[#888]">{publication.date}</CardDescription>
               </CardHeader>
               <CardContent className="flex-grow">
@@ -56,7 +66,7 @@ const PublicationsSection = () => {
                   className="w-full bg-[#222] hover:bg-[#111] text-white dark:bg-zinc-300 dark:hover:bg-zinc-500 dark:text-black border-none font-sans"
                   asChild
                 >
-                    <a
+                  <a
                     href={publication.link}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -69,6 +79,8 @@ const PublicationsSection = () => {
             </Card>
           ))}
         </div>
+
+        {/* CTA Button */}
         <div className="mt-12 text-center">
           <Button asChild className="bg-[#222] hover:bg-[#111] text-white px-8 font-sans dark:bg-zinc-300 dark:hover:bg-zinc-500 dark:text-black">
             <Link to="/publicaciones" className="flex items-center gap-2">
@@ -80,4 +92,5 @@ const PublicationsSection = () => {
     </section>
   );
 };
+
 export default PublicationsSection;
