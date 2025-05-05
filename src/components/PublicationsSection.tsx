@@ -35,7 +35,7 @@ const PublicationsSection = () => {
       <div className="container">
         {/* Title + Underline */}
         <div className="inline-block text-left mb-6">
-          <h2 className="font-nunito text-5xl font-light text-[#222] dark:text-white tracking-wide scale-x-[1.1] mb-5 pl-5 md:pl-5">
+          <h2 className="font-nunito text-5xl font-light text-[#222] dark:text-white tracking-wide scale-x-[1.1] mb-6 pl-6 md:pl-6">
             Publicaciones y Prensa
           </h2>
           <div className="h-[1px] bg-[#222] dark:bg-white mt-2 w-full"></div>

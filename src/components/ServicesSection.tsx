@@ -25,7 +25,7 @@ const ServicesSection = () => {
       <div className="container">
         {/* Title + Underline */}
         <div className="inline-block text-left mb-6">
-          <h2 className="font-nunito text-5xl font-light text-[#222] dark:text-white tracking-wide scale-x-[1.1] mb-3 pl-3 md:pl-3">
+          <h2 className="font-nunito text-5xl font-light text-[#222] dark:text-white tracking-wide scale-x-[1.1] mb-4 pl-4 md:pl-4">
             Qué hacemos
           </h2>
           <div className="h-[1px] bg-[#222] dark:bg-white mt-2 w-full"></div>
