@@ -27,17 +27,17 @@ const Publicaciones = () => {
 
   return (
     <section id="publicaciones" className="py-16">
-      <div className="container px-0">
-        {/* Title + Underline - Now properly aligned with cards */}
-        <div className="px-6 md:px-8 lg:px-12 mb-4">
-          <h2 className="font-nunito text-4xl md:text-5xl font-light text-[#222] dark:text-white tracking-wide scale-x-[1.05]">
+      <div className="container">
+        {/* Title + Underline - aligned with card content */}
+        <div className="mb-4">
+          <h2 className="font-nunito text-3xl sm:text-4xl md:text-5xl font-light text-[#222] dark:text-white tracking-wide scale-x-[1.05]">
             Publicaciones y Prensa
           </h2>
           <div className="h-[1px] bg-[#222] dark:bg-white mt-2 w-full"></div>
         </div>
 
         {/* Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-16 mt-8 px-6 md:px-8 lg:px-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-16 mt-8">
           {sortedPublications.map((publication, index) => (
             <Card key={index} className="flex flex-col h-full hover:shadow-md transition-shadow rounded-[8px]">
               <div className="aspect-[16/9] w-full overflow-hidden rounded-t-[8px]">
