@@ -19,7 +19,7 @@ const Navbar = () => {
   const navLinks = [
     { name: "inicio", target: "home" },
     { name: "qué hacemos", target: "services" },
-    { name: "publicaciones", target: "publications" },
+    { name: "publicaciones y prensa", target: "publications" },
     { name: "sobre lunae", target: "about" },
   ];
 
@@ -85,7 +85,7 @@ const Navbar = () => {
                     <button
                       key={link.name}
                       onClick={() => handleClick(link.target)}
-                      className="nav-link text-lg text-left"
+                      className="nav-link text-lg text-left dark:hover:text-gray-300 hover:text-black"
                     >
                       {link.name}
                     </button>
@@ -98,7 +98,7 @@ const Navbar = () => {
           <>
             <nav className="hidden md:flex items-center space-x-1">
               {navLinks.map((link) => (
-                <button key={link.name} onClick={() => scrollToSection(link.target)} className="nav-link">
+                <button key={link.name} onClick={() => scrollToSection(link.target)} className="nav-link dark:hover:text-gray-300 hover:text-black">
                   {link.name}
                 </button>
               ))}

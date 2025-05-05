@@ -25,7 +25,7 @@ const HeroSection = () => {
             <img
               src={logo}
               alt="Lunae Logo"
-              className="w-[50%] max-w-xs md:max-w-sm lg:max-w-md mx-auto"
+              className="w-[97%] max-w-xs md:max-w-sm lg:max-w-md mx-auto"
             />
             </div>
             <br></br>

@@ -79,6 +79,7 @@ export default {
         display: ['Montserrat', 'sans-serif'],
         serif: ['Lora', 'serif'],
         nunito: ['"Nunito Sans"', 'sans-serif'],
+        avenir: ['"Avenir Next"', 'sans-serif'],
       },
       borderRadius: {
         lg: 'var(--radius)',

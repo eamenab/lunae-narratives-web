@@ -20,10 +20,10 @@ const Footer = () => {
             <img
               src={logo}
               alt="Lunae Advisory Logo"
-              className="h-10 mb-4"
+              className="h-32 mb-4"
             />
             <p className="text-muted-foreground mb-4">
-              lunae - inteligencia política y narrativa
+              inteligencia política y narrativa
             </p>
           </div>
 
@@ -33,33 +33,33 @@ const Footer = () => {
               <li>
                 <button
                   onClick={() => scrollToSection("home")}
-                  className="text-muted-foreground hover:text-primary text-left"
+                  className="text-muted-foreground hover:text-primary text-left dark:hover:text-gray-300 hover:text-blac"
                 >
-                  inicio
+                  Inicio
                 </button>
               </li>
               <li>
                 <button
                   onClick={() => scrollToSection("services")}
-                  className="text-muted-foreground hover:text-primary text-left"
+                  className="text-muted-foreground hover:text-primary text-left dark:hover:text-gray-300 hover:text-blac"
                 >
-                  qué hacemos
+                  Qué hacemos
                 </button>
               </li>
               <li>
                 <button
                   onClick={() => scrollToSection("publications")}
-                  className="text-muted-foreground hover:text-primary text-left"
+                  className="text-muted-foreground hover:text-primary text-left dark:hover:text-gray-300 hover:text-black"
                 >
-                  publicaciones
+                  Publicaciones y Prensa
                 </button>
               </li>
               <li>
                 <button
                   onClick={() => scrollToSection("about")}
-                  className="text-muted-foreground hover:text-primary text-left"
+                  className="text-muted-foreground hover:text-primary text-left dark:hover:text-gray-300 hover:text-black"
                 >
-                  sobre lunae
+                  Sobre lunae
                 </button>
               </li>
             </ul>
@@ -69,8 +69,8 @@ const Footer = () => {
             <h3 className="font-nunito mb-4">Contacto</h3>
             <address className="not-italic text-muted-foreground">
               <p className="mt-2">
-                <a href="mailto:contacto@lunaeadvisory.com" className="hover:text-primary">
-                  contacto@lunaeadvisory.com
+                <a href="mailto:contacto@lunaeadvisory.com" className="hover:text-primary dark:hover:text-gray-300 hover:text-black">
+                  carlos@lunaeadvisory.com
                 </a>
               </p>
             </address>
@@ -79,7 +79,7 @@ const Footer = () => {
           <div className="md:col-span-3">
             <h3 className="font-nunito mb-4">Preferencias</h3>
             <div className="flex items-center gap-2">
-              <span className="text-muted-foreground">cambiar tema:</span>
+              <span className="text-muted-foreground">Cambiar tema:</span>
               <ThemeSwitcher />
             </div>
           </div>

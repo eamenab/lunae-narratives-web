@@ -6,7 +6,7 @@ const profileImg = "cc.png";
 
 const founder = {
   name: "Carlos Cruz Infante, PhD",
-  position: "Director de Lunae",
+  position: "Director de lunae",
   email: "carlos@lunaeadvisory.com",
   linkedin: "https://www.linkedin.com/in/carlos-cruz-infante-phd-06911821/",
 };

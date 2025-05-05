@@ -114,7 +114,12 @@
   }
   
   .nav-link::after {
-    @apply content-[''] absolute left-0 right-0 bottom-0 h-0.5 bg-primary scale-x-0 transition-transform duration-300 origin-left;
+    @apply content-[''] absolute left-0 right-0 bottom-0 h-0.5 scale-x-0 transition-transform duration-300 origin-left;
+    background-color: hsl(var(--primary));
+  }
+
+  .dark .nav-link::after {
+    background-color: gray; 
   }
   
   .nav-link:hover::after,

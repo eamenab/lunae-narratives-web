@@ -25,7 +25,7 @@ const ServicesSection = () => {
       <div className="container">
         {/* Title + Underline */}
         <div className="inline-block text-left mb-6">
-          <h2 className="font-nunito text-5xl font-light text-[#222] dark:text-white tracking-wide scale-x-[1.1]">
+          <h2 className="font-nunito text-5xl font-light text-[#222] dark:text-white tracking-wide scale-x-[1.1] mb-3 pl-3 md:pl-3">
             Qué hacemos
           </h2>
           <div className="h-[1px] bg-[#222] dark:bg-white mt-2 w-full"></div>
@@ -46,7 +46,7 @@ const ServicesSection = () => {
                 />
               </div>
               <div className="flex-1 flex flex-col p-6">
-                <h3 className="font-display text-2xl font-light mb-4 text-[#111] dark:text-zinc-100">
+                <h3 className="font-display text-2xl font-bold mb-4 text-[#111] dark:text-zinc-100">
                   {service.title}
                 </h3>
                 <p className="font-sans text-base text-[#444] dark:text-zinc-300 mb-2">

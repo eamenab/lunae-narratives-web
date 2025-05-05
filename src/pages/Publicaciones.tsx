@@ -30,7 +30,7 @@ const Publicaciones = () => {
         {/* Title + Underline */}
         <div className="inline-block text-left mb-4">
           <h2 className="font-nunito text-5xl font-light text-[#222] dark:text-white tracking-wide scale-x-[1.05]">
-            Publicaciones
+            Publicaciones y Prensa
           </h2>
           <div className="h-[1px] bg-[#222] dark:bg-white mt-2 w-full"></div>
         </div>
