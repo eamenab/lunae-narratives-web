@@ -30,7 +30,7 @@ const Publicaciones = () => {
       <div className="container">
         {/* Title + Underline - aligned with card content */}
         <div className="mb-4">
-          <h2 className="font-nunito text-3xl sm:text-4xl md:text-5xl font-light text-[#222] dark:text-white tracking-wide scale-x-[1.05]">
+          <h2 className="font-nunito text-3xl sm:text-4xl md:text-5xl font-light text-[#222] dark:text-white tracking-wide transform-none">
             Publicaciones y Prensa
           </h2>
           <div className="h-[1px] bg-[#222] dark:bg-white mt-2 w-full"></div>

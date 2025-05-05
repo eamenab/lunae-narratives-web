@@ -33,9 +33,9 @@ const PublicationsSection = () => {
   return (
     <section id="publications" className="bg-muted/50 dark:bg-muted/10 py-16">
       <div className="container">
-        {/* Title + Underline - aligned with card content */}
+        {/* Title + Underline - correctly aligned with content */}
         <div className="mb-6">
-          <h2 className="font-nunito text-3xl sm:text-4xl md:text-5xl font-light text-[#222] dark:text-white tracking-wide scale-x-[1.1] mb-3">
+          <h2 className="font-nunito text-3xl sm:text-4xl md:text-5xl font-light text-[#222] dark:text-white tracking-wide transform-none mb-3">
             Publicaciones y Prensa
           </h2>
           <div className="h-[1px] bg-[#222] dark:bg-white mt-2 w-full"></div>
