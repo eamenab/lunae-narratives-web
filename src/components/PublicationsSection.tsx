@@ -32,9 +32,9 @@ const PublicationsSection = () => {
 
   return (
     <section id="publications" className="bg-muted/50 dark:bg-muted/10 py-16">
-      <div className="container">
-        {/* Title + Underline - Adjusted alignment and responsiveness */}
-        <div className="inline-block text-left mb-6">
+      <div className="container px-0">
+        {/* Title + Underline - Now properly aligned with cards */}
+        <div className="px-6 md:px-8 lg:px-12 mb-6">
           <h2 className="font-nunito text-4xl md:text-5xl font-light text-[#222] dark:text-white tracking-wide scale-x-[1.1] mb-3">
             Publicaciones y Prensa
           </h2>
@@ -42,7 +42,7 @@ const PublicationsSection = () => {
         </div>
 
         {/* Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-x-12 gap-y-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-x-12 gap-y-16 px-6 md:px-8 lg:px-12">
           {recentPublications.map((publication, index) => (
             <Card key={index} className="flex flex-col h-full hover:shadow-md transition-shadow">
               <div className="aspect-video w-full overflow-hidden rounded-t-lg">
