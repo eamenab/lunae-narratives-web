@@ -9,7 +9,7 @@ const services = [
   {
     title: "Hablar en político",
     description: "Traducimos lo que quieres decir a lo que será escuchado.",
-    image: "hablar_en_político.jpg",
+    image: "hablar_en_político.jpg",
   },
   {
     title: "Inteligencia corporativa",
@@ -23,9 +23,9 @@ const ServicesSection = () => {
   return (
     <section id="services" className="bg-muted/50 dark:bg-muted/10 py-16">
       <div className="container">
-        {/* Title + Underline */}
+        {/* Title + Underline - Adjusted padding to align with cards */}
         <div className="inline-block text-left mb-6">
-          <h2 className="font-nunito text-5xl font-light text-[#222] dark:text-white tracking-wide scale-x-[1.1] mb-3 pl-3 md:pl-3">
+          <h2 className="font-nunito text-4xl md:text-5xl font-light text-[#222] dark:text-white tracking-wide scale-x-[1.1] mb-3">
             Qué hacemos
           </h2>
           <div className="h-[1px] bg-[#222] dark:bg-white mt-2 w-full"></div>
@@ -62,5 +62,3 @@ const ServicesSection = () => {
 };
 
 export default ServicesSection;
-
-

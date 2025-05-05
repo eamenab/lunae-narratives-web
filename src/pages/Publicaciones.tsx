@@ -1,3 +1,4 @@
+
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ExternalLink } from "lucide-react";
@@ -27,9 +28,9 @@ const Publicaciones = () => {
   return (
     <section id="publicaciones" className="py-16">
       <div className="container">
-        {/* Title + Underline */}
+        {/* Title + Underline - Adjusted size and alignment */}
         <div className="inline-block text-left mb-4">
-          <h2 className="font-nunito text-5xl font-light text-[#222] dark:text-white tracking-wide scale-x-[1.05]">
+          <h2 className="font-nunito text-4xl md:text-5xl font-light text-[#222] dark:text-white tracking-wide scale-x-[1.05]">
             Publicaciones y Prensa
           </h2>
           <div className="h-[1px] bg-[#222] dark:bg-white mt-2 w-full"></div>

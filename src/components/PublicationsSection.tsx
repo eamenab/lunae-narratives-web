@@ -33,9 +33,9 @@ const PublicationsSection = () => {
   return (
     <section id="publications" className="bg-muted/50 dark:bg-muted/10 py-16">
       <div className="container">
-        {/* Title + Underline */}
+        {/* Title + Underline - Adjusted alignment and responsiveness */}
         <div className="inline-block text-left mb-6">
-          <h2 className="font-nunito text-5xl font-light text-[#222] dark:text-white tracking-wide scale-x-[1.1] mb-5 pl-5 md:pl-5">
+          <h2 className="font-nunito text-4xl md:text-5xl font-light text-[#222] dark:text-white tracking-wide scale-x-[1.1] mb-3">
             Publicaciones y Prensa
           </h2>
           <div className="h-[1px] bg-[#222] dark:bg-white mt-2 w-full"></div>
