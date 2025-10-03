@@ -9,7 +9,7 @@ const services = [
   {
     title: "Hablar en político",
     description: "Traducimos lo que quieres decir a lo que será escuchado.",
-    image: "hablar_en_político.jpg",
+    image: "hablar_en_político.jpg",
   },
   {
     title: "Inteligencia corporativa",
@@ -62,5 +62,3 @@ const ServicesSection = () => {
 };
 
 export default ServicesSection;
-
-
